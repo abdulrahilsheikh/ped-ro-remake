@@ -1,0 +1,23 @@
+.content-container {
+  font-size: 36px;
+  line-height: 40px;
+
+  &::-moz-selection {
+    color: white;
+    background: rgb(194 65 12);
+  }
+
+  &::selection {
+    color: white;
+    background: rgb(194 65 12);
+  }
+
+  &[data-open="open"] {
+    filter: blur(0px);
+  }
+  &[data-open="close"] {
+    color: white;
+    filter: blur(6px);
+    pointer-events: none;
+  }
+}

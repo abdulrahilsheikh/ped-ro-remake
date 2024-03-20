@@ -1,0 +1,42 @@
+.reveal-btn {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.125rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border-width: 1px;
+  font-size: 30px;
+  line-height: 34px;
+  border: thin solid;
+
+  &::-moz-selection {
+    color: white;
+    background: rgb(194 65 12);
+  }
+
+  &::selection {
+    color: white;
+    background: rgb(194 65 12);
+  }
+}
+
+@media (hover: hover) {
+  .reveal-btn:hover {
+    cursor: help;
+    background-color: rgb(194 65 12);
+    border-color: rgb(194 65 12) !important;
+  }
+  .reveal-btn[data-open="open"] {
+    &:hover {
+      & + .content-container[data-open="open"] {
+        color: rgb(194 65 12);
+        .reveal-btn[data-open="open"] {
+          border-color: rgb(194 65 12);
+          background-color: rgb(194 65 12);
+        }
+      }
+    }
+  }
+}
