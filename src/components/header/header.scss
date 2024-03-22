@@ -5,21 +5,27 @@
   color: white;
   font-size: 1rem;
   padding: 0.75rem 1rem;
+  width: 100%;
+  font-family: "Tienne", cursive;
   nav {
     display: flex;
     gap: 1rem;
-    font-family: "Tienne", cursive;
     font-weight: 400;
     font-style: normal;
-
+    width: 100%;
+    justify-content: space-between;
     a {
       cursor: pointer;
       border-bottom: 0px solid rgb(194 65 12);
       transition: "border-bottom" 0.2s ease;
       &.selected {
-        // text-decoration-line: underline;
         border-bottom: 2px solid rgb(194 65 12);
       }
+    }
+
+    .complete {
+      color: rgb(194 65 12);
+      font-weight: 700;
     }
   }
 }

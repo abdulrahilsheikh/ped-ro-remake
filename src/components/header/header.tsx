@@ -1,9 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import "./header.scss";
+import { useContext } from "react";
+import { ContentContext } from "../../context/content-context";
 
 const navList = [{ link: "/", text: "Home" }];
 const Header = () => {
   const activePath = useLocation();
+  const { buttonCount } = useContext(ContentContext);
 
   return (
     <header className="header">
@@ -17,7 +20,9 @@ const Header = () => {
           </Link>
         ))}
 
-        <div></div>
+        <div className={buttonCount == 9 ? "complete" : ""}>
+          R{buttonCount} / R9
+        </div>
       </nav>
     </header>
   );

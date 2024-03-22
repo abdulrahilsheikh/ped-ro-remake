@@ -1,10 +1,6 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./App.scss";
-import ContentTree from "./components/content-tree/content-tree";
-import { data_tree } from "./constant/data-tree";
 import { ContentContext } from "./context/content-context";
-import ScreenTexture from "./components/screen-texture/screen-texture";
-import Header from "./components/header/header";
 import Route from "./routes/route";
 
 function App() {

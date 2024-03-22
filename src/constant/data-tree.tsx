@@ -1,3 +1,4 @@
+import ExternalLink from "../components/external-link/external-link";
 import RevealButton from "../components/reveal-btn/reveal-btn";
 
 export const data_tree = {
@@ -61,21 +62,15 @@ export const data_tree = {
       id: "9",
       children: [
         `my linkedin link is`,
-        <a
-          className="text-3xl mx-4 border-b border-b-white transition hover:bg-orange-700"
-          href="https://in.linkedin.com/in/rahil-sheikh-b9a1aa21b"
-          target="_blank"
-        >
-          @Linkedin
-        </a>,
+        <ExternalLink
+          link="https://in.linkedin.com/in/rahil-sheikh-b9a1aa21b"
+          text="@Linkedin ."
+        />,
         `I'm also on`,
-        <a
-          className="text-3xl mx-4 border-b border-b-white transition hover:bg-orange-700"
-          href="https://github.com/abdulrahilsheikh"
-          target="_blank"
-        >
-          @GitHub
-        </a>,
+        <ExternalLink
+          link="https://github.com/abdulrahilsheikh"
+          text="@GitHub"
+        />,
       ],
     },
   ],

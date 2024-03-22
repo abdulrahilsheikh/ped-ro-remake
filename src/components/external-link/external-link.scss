@@ -1,0 +1,12 @@
+.link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-bottom-width: 1px;
+  transition: "background-color" 0.25s ease;
+  font-size: 26px;
+  font-family: "Tienne", cursive;
+
+  &:hover {
+    background-color: rgb(194 65 12);
+  }
+}
