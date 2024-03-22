@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ContentContext } from "../../context/content-context";
 import "./reveal-btn.scss";
 const RevealButton = ({ text, id }: { text: string; id: string }) => {
