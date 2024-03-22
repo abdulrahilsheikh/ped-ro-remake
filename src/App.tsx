@@ -1,38 +1,27 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.scss";
-import video from "./assets/video-5.mp4";
 import ContentTree from "./components/content-tree/content-tree";
 import { data_tree } from "./constant/data-tree";
 import { ContentContext } from "./context/content-context";
+import ScreenTexture from "./components/screen-texture/screen-texture";
+import Header from "./components/header/header";
+import Route from "./routes/route";
 
 function App() {
   const [openContent, setOpenContent] = useState<{ [key: string]: boolean }>({
     root: true,
   });
+  const [buttonCount, setButtonCount] = useState(0);
   const toggleOpenContent = (id: string) => {
-    setOpenContent({ ...openContent, [id]: !openContent[id] });
+    const newCountState = { ...openContent, [id]: !openContent[id] };
+    setButtonCount(newCountState[id] ? buttonCount + 1 : buttonCount - 1);
+    setOpenContent(newCountState);
   };
   return (
-    <ContentContext.Provider value={{ openContent, toggleOpenContent }}>
-      <div className="main-page">
-        <div className="text-section">
-          <div className="text-container">
-            <ContentTree data={data_tree} />
-          </div>
-        </div>
-        <div className="video-section">
-          <video
-            src={video}
-            loop
-            muted
-            controls={false}
-            disablePictureInPicture
-            autoPlay
-            preload="auto"
-            className="video"
-          />
-        </div>
-      </div>
+    <ContentContext.Provider
+      value={{ openContent, toggleOpenContent, setButtonCount, buttonCount }}
+    >
+      <Route />
     </ContentContext.Provider>
   );
 }

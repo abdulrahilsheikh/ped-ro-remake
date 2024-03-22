@@ -30,7 +30,7 @@ export const data_tree = {
     {
       id: "4",
       children: [
-        `. It's a small service based startup. Which focus on full product development. I wear many different `,
+        `. It's a sofware development company. Which focus on full product development. I wear many different `,
         <RevealButton id="5" text="HATS" />,
         {
           id: "5",
@@ -66,7 +66,7 @@ export const data_tree = {
           href="https://in.linkedin.com/in/rahil-sheikh-b9a1aa21b"
           target="_blank"
         >
-          Linkedin
+          @Linkedin
         </a>,
         `I'm also on`,
         <a
@@ -74,7 +74,7 @@ export const data_tree = {
           href="https://github.com/abdulrahilsheikh"
           target="_blank"
         >
-          GitHub
+          @GitHub
         </a>,
       ],
     },

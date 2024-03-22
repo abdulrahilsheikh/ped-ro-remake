@@ -1,0 +1,11 @@
+.screen-texture {
+  z-index: 90;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  filter: contrast(60%) brightness(100%);
+  opacity: 0.15;
+}

@@ -1,0 +1,51 @@
+.text-section {
+  z-index: 20;
+  height: 100vh;
+  position: fixed;
+  inset: 0px;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(0 0 0);
+  mix-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  overflow-wrap: break-word;
+
+  overflow: auto;
+
+  .text-container {
+    padding: 1rem;
+
+    padding-top: 10rem;
+    z-index: 10;
+    max-width: 60rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+      filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+.video-section {
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .video {
+    width: 100%;
+    opacity: 0.5;
+    height: 100%;
+    filter: grayscale(100%);
+  }
+}

@@ -1,6 +1,5 @@
 .content-container {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 30px;
 
   &::-moz-selection {
     color: white;
@@ -16,7 +15,7 @@
     filter: blur(0px);
   }
   &[data-open="close"] {
-    color: white;
+    color: rgba(255, 255, 255, 0.55);
     filter: blur(6px);
     pointer-events: none;
   }
