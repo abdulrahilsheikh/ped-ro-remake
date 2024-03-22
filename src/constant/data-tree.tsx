@@ -64,7 +64,7 @@ export const data_tree = {
         `my linkedin link is`,
         <ExternalLink
           link="https://in.linkedin.com/in/rahil-sheikh-b9a1aa21b"
-          text="@Linkedin ."
+          text="@Linkedin . "
         />,
         `I'm also on`,
         <ExternalLink
